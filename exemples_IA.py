@@ -1,4 +1,4 @@
-import libIA
+import LibIA.libIA
 
 def exemple_chrono():
     # Combien de temps il faut pour compter jusqu'a 1 million?
