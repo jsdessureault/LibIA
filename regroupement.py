@@ -3,7 +3,7 @@ import sys
 from matplotlib import pyplot as plt
 from sklearn import cluster
 
-import libIA
+import LibIA.libIA
 
 
 class Regroupement:
