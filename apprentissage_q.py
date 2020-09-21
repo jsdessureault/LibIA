@@ -4,13 +4,13 @@
 # https://github.com/openai/gym/blob/master/gym/envs/box2d/lunar_lander.py
 
 # remove " > /dev/null 2>&1" to see what is going on under the hood
-# !pip install gym pyvirtualdisplay > /dev/null 2>&1
-# !apt-get install -y xvfb python-opengl ffmpeg > /dev/null 2>&1
-# !apt-get update > /dev/null 2>&1
-# !apt-get install cmake > /dev/null 2>&1
-# !pip install --upgrade setuptools 2>&1
-# !pip install ez_setup > /dev/null 2>&1
-# !pip install gym[atari] > /dev/null 2>&1
+!pip install gym pyvirtualdisplay > /dev/null 2>&1
+!apt-get install -y xvfb python-opengl ffmpeg > /dev/null 2>&1
+!apt-get update > /dev/null 2>&1
+!apt-get install cmake > /dev/null 2>&1
+!pip install --upgrade setuptools 2>&1
+!pip install ez_setup > /dev/null 2>&1
+!pip install gym[atari] > /dev/null 2>&1
 
 import base64
 # %matplotlib inline
@@ -25,7 +25,7 @@ from IPython.display import HTML
 from gym import logger as gymlogger
 from gym.wrappers import Monitor
 
-import libIA
+import LibIA.libIA
 
 tf.disable_v2_behavior()
 
