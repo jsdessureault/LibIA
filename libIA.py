@@ -9,12 +9,12 @@ from keras.utils import to_categorical
 from matplotlib import pyplot as plt
 import random
 
-import LibIA.chronometre
+import LibIA.chronometre as chrono
 import LibIA.perceptron
 import LibIA.regression
 import LibIA.regroupement
 import LibIA.apprentissage_q
-from LibIA.donnees import Donnees
+from LibIA.donnees import Donnees as donnees
 
 
 class LibIA:
@@ -55,8 +55,8 @@ class LibIA:
 
     def __init__(self, bavard=True):
         self.bavard = bavard
-        self.chrono = LibIA.chronometre.Chronometre(bavard)
-        self.donnees = LibIA.donnees.Donnees()
+        self.chrono = chrono.Chronometre(bavard)
+        self.donnees = donnees.Donnees()
 
         if self.bavard:
             print("LibIA: Création de LibIA.")
