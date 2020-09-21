@@ -6,7 +6,7 @@ from keras.layers import Dense
 from keras.models import Sequential
 from matplotlib import pyplot as plt
 
-import donnees
+import LibIA.donnees
 
 
 class Perceptron:
