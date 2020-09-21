@@ -1,4 +1,4 @@
-import libIA
+import LibIA.libIA
 
 def exercice_affiche():
     bob = libIA.LibIA()
