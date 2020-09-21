@@ -9,11 +9,11 @@ from keras.utils import to_categorical
 from matplotlib import pyplot as plt
 import random
 
-import LibIA.apprentissage_q
 import LibIA.chronometre
 import LibIA.perceptron
 import LibIA.regression
 import LibIA.regroupement
+import LibIA.apprentissage_q
 from LibIA.donnees import Donnees
 
 
