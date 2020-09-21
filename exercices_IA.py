@@ -1,4 +1,4 @@
-import libIA
+import LibIA.libIA
 
 def regression_boston():
     bob = libIA.LibIA()
