@@ -1,4 +1,4 @@
-import libIA
+import LibIA.libIA
 
 def exemple_variables_affichage_1():
     bob = libIA.LibIA()
