@@ -81,7 +81,7 @@ class LibIA:
     def __init__(self, bavard=True):
         self.bavard = bavard
         self.chrono = Chronometre(bavard)
-        self.donnees = donnees.Donnees()
+        self.donnees = Donnees()
 
         if self.bavard:
             print("LibIA: Création de LibIA.")
