@@ -310,28 +310,27 @@ class Chronometre:
 # https://gist.github.com/syuntoku14/b9527403697a6565237ff5a403517db2
 # https://www.learndatasci.com/tutorials/reinforcement-q-learning-scratch-python-openai-gym/
 # https://github.com/openai/gym/blob/master/gym/envs/box2d/lunar_lander.py
+import base64
+# %matplotlib inline
+import glob
+import io
+import sys
+
+import gym
+import tensorflow.compat.v1 as tf
+from IPython import display as ipythondisplay
+from IPython.display import HTML
+from gym import logger as gymlogger
+from gym.wrappers import Monitor
+tf.disable_v2_behavior()
+
+from pyvirtualdisplay import Display
+
+display = Display(visible=0, size=(1400, 900))
+display.start()
 
 class Apprentissage_Q:
-        
-        import base64
-        # %matplotlib inline
-        import glob
-        import io
-        import sys
-
-        import gym
-        import tensorflow.compat.v1 as tf
-        from IPython import display as ipythondisplay
-        from IPython.display import HTML
-        from gym import logger as gymlogger
-        from gym.wrappers import Monitor
-        tf.disable_v2_behavior()
-
-        from pyvirtualdisplay import Display
-
-        display = Display(visible=0, size=(1400, 900))
-        display.start()
-    
+            
     def __init__(self, nb_apprentissages=50, jeu=0, bavard=True):
         self.nb_apprentissage = nb_apprentissages
         self.jeu = jeu
