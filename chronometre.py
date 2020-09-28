@@ -1,7 +1,7 @@
 import datetime
 
 
-class Chronometre:
+class LibIA.Chronometre:
 
     def __init__(self, bavard=True):
         self.bavard = bavard
