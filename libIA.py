@@ -2,6 +2,13 @@
 # Par Jean-Sebastien Dessureault
 # Et Jonathan Simard
 
+!pip install gym pyvirtualdisplay  > /dev/null 2>&1
+!apt-get install -y xvfb python-opengl ffmpeg > /dev/null 2>&1
+!apt-get update > /dev/null 2>&1
+!apt-get install cmake > /dev/null 2>&1
+!pip install --upgrade setuptools 2>&1
+!pip install ez_setup > /dev/null 2>&1
+!pip install gym[atari] > /dev/null 2>&1
 
 # Classe DONNÉES ---------------------------------------------------------------------------------------------------------------------------------------------------
 #Données
@@ -312,13 +319,6 @@ class Chronometre:
 # https://www.learndatasci.com/tutorials/reinforcement-q-learning-scratch-python-openai-gym/
 # https://github.com/openai/gym/blob/master/gym/envs/box2d/lunar_lander.py
 
-!pip install gym pyvirtualdisplay  > /dev/null 2>&1
-!apt-get install -y xvfb python-opengl ffmpeg > /dev/null 2>&1
-!apt-get update > /dev/null 2>&1
-!apt-get install cmake > /dev/null 2>&1
-!pip install --upgrade setuptools 2>&1
-!pip install ez_setup > /dev/null 2>&1
-!pip install gym[atari] > /dev/null 2>&1
 class Apprentissage_Q:
         
         import base64
