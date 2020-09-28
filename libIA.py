@@ -312,24 +312,6 @@ class Chronometre:
 # https://www.learndatasci.com/tutorials/reinforcement-q-learning-scratch-python-openai-gym/
 # https://github.com/openai/gym/blob/master/gym/envs/box2d/lunar_lander.py
 
-import base64
-# %matplotlib inline
-import glob
-import io
-import sys
-
-import gym
-import tensorflow.compat.v1 as tf
-from IPython import display as ipythondisplay
-from IPython.display import HTML
-from gym import logger as gymlogger
-from gym.wrappers import Monitor
-tf.disable_v2_behavior()
-
-from pyvirtualdisplay import Display
-
-display = Display(visible=0, size=(1400, 900))
-display.start()
 
 class Apprentissage_Q:
 
@@ -344,6 +326,33 @@ class Apprentissage_Q:
         self.done = None
         self.info = None
         self.bavard = bavard
+
+        !pip install gym pyvirtualdisplay  > /dev/null 2>&1
+        !apt-get install -y xvfb python-opengl ffmpeg > /dev/null 2>&1
+        !apt-get update > /dev/null 2>&1
+        !apt-get install cmake > /dev/null 2>&1
+        !pip install --upgrade setuptools 2>&1
+        !pip install ez_setup > /dev/null 2>&1
+        !pip install gym[atari] > /dev/null 2>&1
+        
+        import base64
+        # %matplotlib inline
+        import glob
+        import io
+        import sys
+
+        import gym
+        import tensorflow.compat.v1 as tf
+        from IPython import display as ipythondisplay
+        from IPython.display import HTML
+        from gym import logger as gymlogger
+        from gym.wrappers import Monitor
+        tf.disable_v2_behavior()
+
+        from pyvirtualdisplay import Display
+
+        display = Display(visible=0, size=(1400, 900))
+        display.start()
 
         self.valide = False
 
