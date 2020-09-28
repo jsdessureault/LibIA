@@ -14,7 +14,7 @@ import random
 #import gitLibIA.regression
 #import gitLibIA.regroupement
 #import gitLibIA.apprentissage_q
-#from gitLibIA.donnees import Donnees as donnees
+from gitLibIA.donnees import Donnees as donnees
 
 import datetime
 
@@ -81,7 +81,7 @@ class LibIA:
     def __init__(self, bavard=True):
         self.bavard = bavard
         self.chrono = Chronometre(bavard)
-        #self.donnees = Donnees()
+        self.donnees = donnees.Donnees()
 
         if self.bavard:
             print("LibIA: Création de LibIA.")
