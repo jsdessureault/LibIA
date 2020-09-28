@@ -315,18 +315,6 @@ class Chronometre:
 
 class Apprentissage_Q:
 
-    def __init__(self, nb_apprentissages=50, jeu=0, bavard=True):
-        self.nb_apprentissage = nb_apprentissages
-        self.jeu = jeu
-
-        self.env = None
-        self.observation = None
-        self.action = None
-        self.reward = None
-        self.done = None
-        self.info = None
-        self.bavard = bavard
-
         !pip install gym pyvirtualdisplay  > /dev/null 2>&1
         !apt-get install -y xvfb python-opengl ffmpeg > /dev/null 2>&1
         !apt-get update > /dev/null 2>&1
@@ -353,6 +341,18 @@ class Apprentissage_Q:
 
         display = Display(visible=0, size=(1400, 900))
         display.start()
+    
+    def __init__(self, nb_apprentissages=50, jeu=0, bavard=True):
+        self.nb_apprentissage = nb_apprentissages
+        self.jeu = jeu
+
+        self.env = None
+        self.observation = None
+        self.action = None
+        self.reward = None
+        self.done = None
+        self.info = None
+        self.bavard = bavard
 
         self.valide = False
 
