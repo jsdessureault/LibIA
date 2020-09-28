@@ -55,8 +55,8 @@ class LibIA:
 
     def __init__(self, bavard=True):
         self.bavard = bavard
-        self.chrono = LibIA.chronometre.Chronometre(bavard)
-        self.donnees = LibIA.donnees.Donnees()
+        self.chrono = gitLibIA.chronometre.Chronometre(bavard)
+        self.donnees = gitLibIA.donnees.Donnees()
 
         if self.bavard:
             print("LibIA: Création de LibIA.")
