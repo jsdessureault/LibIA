@@ -2,14 +2,6 @@
 # Par Jean-Sebastien Dessureault
 # Et Jonathan Simard
 
-!pip install gym pyvirtualdisplay  > /dev/null 2>&1
-!apt-get install -y xvfb python-opengl ffmpeg > /dev/null 2>&1
-!apt-get update > /dev/null 2>&1
-!apt-get install cmake > /dev/null 2>&1
-!pip install --upgrade setuptools 2>&1
-!pip install ez_setup > /dev/null 2>&1
-!pip install gym[atari] > /dev/null 2>&1
-
 # Classe DONNÉES ---------------------------------------------------------------------------------------------------------------------------------------------------
 #Données
 import random
