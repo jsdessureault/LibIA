@@ -324,11 +324,6 @@ from gym import logger as gymlogger
 from gym.wrappers import Monitor
 tf.disable_v2_behavior()
 
-from pyvirtualdisplay import Display
-
-display = Display(visible=0, size=(1400, 900))
-display.start()
-
 class Apprentissage_Q:
             
     def __init__(self, nb_apprentissages=50, jeu=0, bavard=True):
