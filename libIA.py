@@ -720,7 +720,7 @@ class Regression:
             
         if self.valide:
             
-            print(self.x_test)
+            #print(self.x_test)
             
             #le_min = np.min(self.x_test)
             #le_max = np.max(self.x_test)
