@@ -896,7 +896,7 @@ class LibIA:
         if type == self.TYPE_PERCEPTRON:
             if self.bavard:
                 print("LibIA: Création d'un IA de type Perceptron.")
-            self.ia = Perceptron(x_entrainement=self.donnees.x_entrainement,
+            self.ia = libIA.Perceptron(x_entrainement=self.donnees.x_entrainement,
                                             y_entrainement=self.donnees.y_entrainement,
                                             x_test=self.donnees.x_test,
                                             y_test=self.donnees.y_test,
@@ -910,7 +910,7 @@ class LibIA:
         elif type == self.TYPE_REGRESSION:
             if self.bavard:
                 print("LibIA: Création d'un IA de type Régression.")
-            self.ia = Regression(x_entrainement=self.donnees.x_entrainement,
+            self.ia = libIA.Regression(x_entrainement=self.donnees.x_entrainement,
                                             y_entrainement=self.donnees.y_entrainement,
                                             x_test=self.donnees.x_test,
                                             y_test=self.donnees.y_test,
@@ -920,14 +920,14 @@ class LibIA:
         elif type == self.TYPE_APPRENTISSAGE_Q:
             if self.bavard:
                 print("LibIA: Création d'un IA de type Apprentissage Q.")
-            self.ia = Apprentissage_Q(
+            self.ia = libIA.Apprentissage_Q(
                                             nb_apprentissages=nb_apprentissages,
                                             jeu=jeu,
                                             bavard=self.bavard)
         elif type == self.TYPE_K_MOYENNE:
             if self.bavard:
                 print("LibIA: Création d'un IA de type Regroupement K Moyenne.")
-            self.ia = Regroupement(
+            self.ia = libIA.Regroupement(
                                             type=self.TYPE_K_MOYENNE,
                                             x_entrainement=self.donnees.x_entrainement,
                                             y_entrainement=self.donnees.y_entrainement,
