@@ -887,7 +887,6 @@ class LibIA:
         self.bavard = bavard
         self.chrono = Chronometre(bavard)
         self.donnees = Donnees()
-        self.ia = Regression()
 
         if self.bavard:
             print("LibIA: Création de LibIA.")
