@@ -892,52 +892,52 @@ class LibIA:
             print("LibIA: Création de LibIA.")
 
     def creer_ia(self, type=None, taux_apprentissage=0.001, nb_neurones_entrees=2, nb_neurones_sorties=1, nb_couches_cachees=1, nb_neurones_cachees=2, nb_apprentissages=50, jeu=0, nb_categories=3, nb_donnees_min_groupe=3):
-        try:
-            if type == self.TYPE_PERCEPTRON:
-                if self.bavard:
-                    print("LibIA: Création d'un IA de type Perceptron.")
-                self.ia = perceptron.Perceptron(x_entrainement=self.donnees.x_entrainement,
-                                                y_entrainement=self.donnees.y_entrainement,
-                                                x_test=self.donnees.x_test,
-                                                y_test=self.donnees.y_test,
-                                                taux_apprentissage=taux_apprentissage,
-                                                nb_neurones_entrees=nb_neurones_entrees,
-                                                nb_neurones_sorties=nb_neurones_sorties,
-                                                nb_couches_cachees=nb_couches_cachees,
-                                                nb_neurones_cachees=nb_neurones_cachees,
-                                                nb_apprentissages=nb_apprentissages,
-                                                bavard=self.bavard)
-            elif type == self.TYPE_REGRESSION:
-                if self.bavard:
-                    print("LibIA: Création d'un IA de type Régression.")
-                self.ia = regression.Regression(x_entrainement=self.donnees.x_entrainement,
-                                                y_entrainement=self.donnees.y_entrainement,
-                                                x_test=self.donnees.x_test,
-                                                y_test=self.donnees.y_test,
-                                                taux_apprentissage=taux_apprentissage,
-                                                nb_apprentissages=nb_apprentissages,
-                                                bavard=self.bavard)
-            elif type == self.TYPE_APPRENTISSAGE_Q:
-                if self.bavard:
-                    print("LibIA: Création d'un IA de type Apprentissage Q.")
-                self.ia = apprentissage_q.Apprentissage_Q(
-                                                nb_apprentissages=nb_apprentissages,
-                                                jeu=jeu,
-                                                bavard=self.bavard)
-            elif type == self.TYPE_K_MOYENNE:
-                if self.bavard:
-                    print("LibIA: Création d'un IA de type Regroupement K Moyenne.")
-                self.ia = regroupement.Regroupement(
-                                                type=self.TYPE_K_MOYENNE,
-                                                x_entrainement=self.donnees.x_entrainement,
-                                                y_entrainement=self.donnees.y_entrainement,
-                                                nb_categories=nb_categories,
-                                                bavard=self.bavard)
-            else:
-                print("LibIA: * ERREUR 1: * Le type d'IA spécifié est invalide. Vérifiez le paramètre 'type'.")
-        except:
-            print("LibIA: * ERREUR 2: * Une erreur est survenue lors de l'appel de 'créez IA'.  Vérifier les paramètres.")
-            sys.exit()
+        # try:
+        if type == self.TYPE_PERCEPTRON:
+            if self.bavard:
+                print("LibIA: Création d'un IA de type Perceptron.")
+            self.ia = perceptron.Perceptron(x_entrainement=self.donnees.x_entrainement,
+                                            y_entrainement=self.donnees.y_entrainement,
+                                            x_test=self.donnees.x_test,
+                                            y_test=self.donnees.y_test,
+                                            taux_apprentissage=taux_apprentissage,
+                                            nb_neurones_entrees=nb_neurones_entrees,
+                                            nb_neurones_sorties=nb_neurones_sorties,
+                                            nb_couches_cachees=nb_couches_cachees,
+                                            nb_neurones_cachees=nb_neurones_cachees,
+                                            nb_apprentissages=nb_apprentissages,
+                                            bavard=self.bavard)
+        elif type == self.TYPE_REGRESSION:
+            if self.bavard:
+                print("LibIA: Création d'un IA de type Régression.")
+            self.ia = regression.Regression(x_entrainement=self.donnees.x_entrainement,
+                                            y_entrainement=self.donnees.y_entrainement,
+                                            x_test=self.donnees.x_test,
+                                            y_test=self.donnees.y_test,
+                                            taux_apprentissage=taux_apprentissage,
+                                            nb_apprentissages=nb_apprentissages,
+                                            bavard=self.bavard)
+        elif type == self.TYPE_APPRENTISSAGE_Q:
+            if self.bavard:
+                print("LibIA: Création d'un IA de type Apprentissage Q.")
+            self.ia = apprentissage_q.Apprentissage_Q(
+                                            nb_apprentissages=nb_apprentissages,
+                                            jeu=jeu,
+                                            bavard=self.bavard)
+        elif type == self.TYPE_K_MOYENNE:
+            if self.bavard:
+                print("LibIA: Création d'un IA de type Regroupement K Moyenne.")
+            self.ia = regroupement.Regroupement(
+                                            type=self.TYPE_K_MOYENNE,
+                                            x_entrainement=self.donnees.x_entrainement,
+                                            y_entrainement=self.donnees.y_entrainement,
+                                            nb_categories=nb_categories,
+                                            bavard=self.bavard)
+        else:
+            print("LibIA: * ERREUR 1: * Le type d'IA spécifié est invalide. Vérifiez le paramètre 'type'.")
+    #    except:
+    #        print("LibIA: * ERREUR 2: * Une erreur est survenue lors de l'appel de 'créez IA'.  Vérifier les paramètres.")
+    #        sys.exit()
 
     def entree_donnees(self):
         texte = input()
