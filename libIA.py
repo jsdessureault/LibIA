@@ -718,8 +718,8 @@ class Regression:
         if self.bavard:
             print("LibIA: Affichage des résultats.")
         if self.valide:
-            le_min = np.min(np.array(self.x_test))
-            le_max = np.max(np.array(self.x_test))
+            le_min = np.array(self.x_test).flatten().min()
+            le_max = np.array(self.x_test).flatten().max()
 
             x1 = [le_min]
             y1 = self.modele.predict(x1)
