@@ -719,8 +719,8 @@ class Regression:
             print("LibIA: Affichage des résultats.")
         if self.valide:
 
-            le_min = min(self.x_test.any())
-            le_max = max(self.x_test.any())
+            le_min = min(self.x_test.flatten())
+            le_max = max(self.x_test.flatten())
 
             x1 = [le_min]
             y1 = self.modele.predict(x1)
