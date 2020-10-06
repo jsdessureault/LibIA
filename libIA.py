@@ -726,9 +726,9 @@ class Regression:
             print(le_max)
 
             x1 = [le_min]
-            y1 = self.modele.predict(x_test=x1)
+            y1 = self.modele.predict(x1)
             x2 = [le_max]
-            y2 = self.modele.predict(x_test=x2)
+            y2 = self.modele.predict(x2)
 
             plt.scatter(self.x_test, self.y_test, color='black')
             plt.plot([x1[0], x2[0]], [y1, y2], color='blue', linewidth=3)
