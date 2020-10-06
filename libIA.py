@@ -725,17 +725,19 @@ class Regression:
             le_max = np.max(self.x_test)
             
             print("Passé!")
+            print(le_min)
+            print(le_max)
 
-            x1 = [le_min]
-            y1 = self.modele.predict(x1)
-            x2 = [le_max]
-            y2 = self.modele.predict(x2)
+            #x1 = [le_min]
+            #y1 = self.modele.predict(x_test=x1)
+            #x2 = [le_max]
+            #y2 = self.modele.predict(x_test=x2)
 
-            plt.scatter(self.x_test, self.y_test, color='black')
-            plt.plot([x1[0], x2[0]], [y1, y2], color='blue', linewidth=3)
-            plt.scatter([x1, x2], [y1, y2], color='orange')
-            plt.scatter([self.x_pred], [self.y_pred], marker='D', color='red')
-            plt.show()
+            #plt.scatter(self.x_test, self.y_test, color='black')
+            #plt.plot([x1[0], x2[0]], [y1, y2], color='blue', linewidth=3)
+            #plt.scatter([x1, x2], [y1, y2], color='orange')
+            #plt.scatter([self.x_pred], [self.y_pred], marker='D', color='red')
+            #plt.show()
         else:
             print("LibIA: * ERREUR 11 * Vous devez avoir creé un modèle valide avant de l'afficher.")
             sys.exit()
