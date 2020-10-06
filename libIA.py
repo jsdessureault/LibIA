@@ -722,10 +722,9 @@ class Regression:
            
             le_min = np.min(self.x_test)
             le_max = np.max(self.x_test)
-            print(le_min)
-            print(le_max)
 
             x1 = [le_min]
+            print(x1)
             y1 = self.modele.predict(x1)
             x2 = [le_max]
             y2 = self.modele.predict(x2)
