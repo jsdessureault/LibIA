@@ -538,7 +538,7 @@ class Perceptron:
             self.modele.add(Dense(self.nb_neurones_sorties, activation='sigmoid'))
             #opti = optimizers.Adam(lr=self.taux_apprentissage)
             opti = optimizers.Adam()
-            self.modele.compile(loss='binary_crossentropy', optimizer=opti, metrics=['mse'])
+            self.modele.compile(loss='binary_crossentropy', optimizer=opti, metrics=['acc'])
 
     def entrainer_modele(self):
         if self.bavard:
@@ -586,7 +586,7 @@ class Perceptron:
             print("LibIA: Affichage de l'erreur.")
         if self.valide:
             # plt.plot(self.histoire.history['mse'])
-            plt.plot(self.histoire.history['mse'])
+            plt.plot(self.histoire.history['acc'])
             plt.show()
         else:
             print("LibIA: * ERREUR 12 * Vous devez avoir creé un modèle valide avant de d'afficher l'erreur.")
