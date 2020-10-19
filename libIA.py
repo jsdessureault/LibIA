@@ -832,8 +832,8 @@ class Regroupement:
             print("LibIA: Affichage du modèle")
         if self.valide:
             print("LibIA: Architecture de l'apprentissage non supervisée:")
-            if self.type == libIA.LibIA.TYPE_K_MOYENNE:
-                print("LibIA: Type: k-moyenne")
+            #if self.type == libIA.LibIA.TYPE_K_MOYENNE:
+            print("LibIA: Type: K-moyenne")
             print("LibIA: Utilite:  Regroupement de valeurs semblables")
             print("LibIA: Nombre de categories: " + str(self.nb_categories))
         else:
