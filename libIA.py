@@ -769,13 +769,13 @@ class Regroupement:
             print("LibIA: Construction du modèle.")
         if self.valide:
 
-            if self.type == libIA.LibIA.TYPE_K_MOYENNE:
-                self.modele = cluster.KMeans(n_clusters=self.nb_categories)
+            #if self.type == libIA.LibIA.TYPE_K_MOYENNE:
+            self.modele = cluster.KMeans(n_clusters=self.nb_categories)
             #elif self.type == libIA.LibIA.TYPE_OPTIQUE:
             #    self.modele = cluster.OPTICS(min_samples=self.nb_donnees_min_groupe)
-            else:
-                print("LibIA: * ERREUR 16 * le type de regroupement spécifié est invalide.")
-                sys.exit()
+            #else:
+            #    print("LibIA: * ERREUR 16 * le type de regroupement spécifié est invalide.")
+            #    sys.exit()
 
     def entrainer_modele(self):
         if self.bavard:
