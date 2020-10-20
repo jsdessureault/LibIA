@@ -355,13 +355,9 @@ class Apprentissage_Q:
             print("LibIA: Entraînement du modèle.")
         if self.valide:
             while True:
-                print("Avant RENDER")
                 self.env.render()
-                print("avant Action space")
                 self.action = self.env.action_space.sample()
-                print("Avant step")
                 self.observation, self.reward, self.done, self.info = self.env.step(self.action)
-                print("Avant IF")
                 if self.done:
                     break;
         else:
