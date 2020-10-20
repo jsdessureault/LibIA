@@ -355,13 +355,17 @@ class Apprentissage_Q:
             print("LibIA: Entraînement du modèle.")
         if self.valide:
             while True:
+                print("Avant RENDER")
                 self.env.render()
+                print("avant Action space")
                 self.action = self.env.action_space.sample()
+                print("Avant step")
                 self.observation, self.reward, self.done, self.info = self.env.step(self.action)
+                print("Avant IF")
                 if self.done:
                     break;
         else:
-            print("LibIA: * ERREUR 10 * Vous devez avoir creé un réseau de neurones valide avant de l'entraîner.")
+            print("LibIA: * ERREUR 10 * Vous devez avoir creé un modèle valide avant de l'entraîner.")
             sys.exit()
 
     def fermer_modele(self):
@@ -383,7 +387,7 @@ class Apprentissage_Q:
             print(
                 "LibIA: Utilité:  Apprentissage lorsqu'il n'y a pas de donnée à apprendre.  Récompenses et punitions lors de simulation. ")
         else:
-            print("LibIA: * ERREUR 11 * Vous devez avoir creé un réseau de neurones valide avant de l'afficher.")
+            print("LibIA: * ERREUR 11 * Vous devez avoir creé un modèle valide avant de l'afficher.")
             sys.exit()
 
     def afficher_erreur(self):
@@ -391,7 +395,7 @@ class Apprentissage_Q:
             print("rien")
         else:
             print(
-                "LibIA: * ERREUR 12 * Vous devez avoir creé un réseau de neurones valide avant de d'afficher l'erreur.")
+                "LibIA: * ERREUR 12 * Vous devez avoir creé un modèle valide avant de d'afficher l'erreur.")
             sys.exit()
 
     def donner_erreur(self):
