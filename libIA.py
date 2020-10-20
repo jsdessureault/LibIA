@@ -421,33 +421,33 @@ class Apprentissage_Q:
         return self.env
 
     def jeu_chaine(self, no):
-        if no == self.JEU_PACMAN:
+        if no == LibIA.JEU_PACMAN:
             return "MsPacman-v0"
-        if no == self.JEU_SPACE_INVADERS:
+        if no == LibIA.JEU_SPACE_INVADERS:
             return "SpaceInvaders-v0"
-        if no == self.JEU_ATLANTIS:
+        if no == LibIA.JEU_ATLANTIS:
             return "Atlantis-v0"
-        if no == self.JEU_BATTLEZONE:
+        if no == LibIA.JEU_BATTLEZONE:
             return "BattleZone-v0"
-        if no == self.JEU_QUILLES:
+        if no == LibIA.JEU_QUILLES:
             return "Bowling-v0"
-        if no == self.JEU_BOXE:
+        if no == LibIA.JEU_BOXE:
             return "Boxing-v0"
-        if no == self.JEU_BREAKOUT:
+        if no == LibIA.JEU_BREAKOUT:
             return "Breakout-v0"
-        if no == self.JEU_ENDURO:
+        if no == LibIA.JEU_ENDURO:
             return "Enduro-v0"
-        if no == self.JEU_HOCKEY:
+        if no == LibIA.JEU_HOCKEY:
             return "IceHockey-v0"
-        if no == self.JEU_PITFALL:
+        if no == LibIA.JEU_PITFALL:
             return "Pitfall-v0"
-        if no == self.JEU_PONG:
+        if no == LibIA.JEU_PONG:
             return "Pong-v0"
-        if no == self.JEU_SKI:
+        if no == LibIA.JEU_SKI:
             return "Skiing-v0"
-        if no == self.JEU_TENNIS:
+        if no == LibIA.JEU_TENNIS:
             return "Tennis-v0"
-        if no == self.JEU_PINBALL:
+        if no == LibIA.JEU_PINBALL:
             return "VideoPinball-v0"
 
 # Classe PERCEPTRON ---------------------------------------------------------------------------------------------------------------------------------------------------
