@@ -708,8 +708,8 @@ class Regression:
             
         if self.valide:
            
-            le_min = np.min(self.x_test)
-            le_max = np.max(self.x_test)
+            le_min = np.min(self.x_entrainement)
+            le_max = np.max(self.x_entrainement)
 
             x1 = [[le_min]]
             y1 = self.modele.predict(x1)
