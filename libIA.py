@@ -80,6 +80,7 @@ class Donnees:
             self.charger_MLB()
 
     def initialiser_jeux_de_donnees(self):
+        self.jeux_de_donnees = []
         self.jeux_de_donnees.append([self.XOU, "Table de verite: Ou exclusif"])
         self.jeux_de_donnees.append([self.ET, "Table de verite: ET"])
         self.jeux_de_donnees.append([self.OU, "Table de verite: OU"])
