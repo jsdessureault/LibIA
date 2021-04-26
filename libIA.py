@@ -716,7 +716,7 @@ class Regression:
             x2 = [[le_max]]
             y2 = self.modele.predict(x2)
 
-            plt.scatter(self.x_train, self.y_train, color='black')
+            plt.scatter(self.x_entrainement, self.y_entrainement , color='black')
             plt.plot([x1[0], x2[0]], [y1, y2], color='blue', linewidth=3)
             plt.scatter([x1, x2], [y1, y2], color='orange')
             plt.scatter([self.x_pred], [self.y_pred], marker='D', color='red')
