@@ -21,19 +21,15 @@ class Donnees:
     y_test = []
 
     # Constantes
-    XOU = 0
-    ET = 1
-    OU = 2
-    NON = 3
-    LNH = 4
-    CHIFFRES_MANUSCRITS = 5
-    MAISONS_BOSTON = 6
-    PIMA = 7
-    CANCER_SEIN = 8
-    NUAGES_POINTS = 9
-    MODE = 10
-    NHL = 11
-    MLB = 12
+
+    CHIFFRES_MANUSCRITS = 0
+    MAISONS_BOSTON = 1
+    PIMA = 2
+    CANCER_SEIN = 3
+    NUAGES_POINTS = 4
+    MODE = 5
+    NHL = 6
+    MLB = 7
 
     def __init__(self):
         self.nb_nuages = None
@@ -54,14 +50,6 @@ class Donnees:
         self.ecart_type = ecart_type
         self.bavard = bavard
 
-        if jeux_de_donnees == self.XOU:
-            self.charger_XOU()
-        if jeux_de_donnees == self.ET:
-            self.charger_ET()
-        if jeux_de_donnees == self.OU:
-            self.charger_OU()
-        if jeux_de_donnees == self.NON:
-            self.charger_NON()
         if jeux_de_donnees == self.CHIFFRES_MANUSCRITS:
             self.charger_CHIFFRES()
         if jeux_de_donnees == self.MAISONS_BOSTON:
@@ -81,16 +69,15 @@ class Donnees:
 
     def initialiser_jeux_de_donnees(self):
         self.jeux_de_donnees = []
-        self.jeux_de_donnees.append([self.XOU, "Table de verite: Ou exclusif"])
-        self.jeux_de_donnees.append([self.ET, "Table de verite: ET"])
-        self.jeux_de_donnees.append([self.OU, "Table de verite: OU"])
-        self.jeux_de_donnees.append([self.NON, "Table de verite: NON"])
+
         self.jeux_de_donnees.append([self.CHIFFRES_MANUSCRITS, "Chiffres ecrits a la main"])
         self.jeux_de_donnees.append([self.MAISONS_BOSTON, "Chiffres ecrits a la main"])
         self.jeux_de_donnees.append([self.PIMA, "Communautes natives Pima et diabete"])
         self.jeux_de_donnees.append([self.CANCER_SEIN, "Cancer du sein"])
         self.jeux_de_donnees.append([self.NUAGES_POINTS, "Nuages de points"])
         self.jeux_de_donnees.append([self.MODE, "Vetements de mode"])
+        self.jeux_de_donnees.append([self.NHL, "Statistiques hockey NHL"])
+        self.jeux_de_donnees.append([self.MLB, "Statistiques baseball MLB"])
 
     def afficher_jeux_donnees(self):
         print("LibIA: Ensembles de données disponibles:")
