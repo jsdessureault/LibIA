@@ -1,22 +1,6 @@
 import LibIA.libIA
 
-def regression_boston():
-    bob = libIA.LibIA()
-    bob.activer_bavard(bob.Vrai)
-    bob.chrono.demarrer()
-    bob.charger_donnees(bob.donnees.MAISONS_BOSTON)
-    bob.afficher_entrees_entrainement()
-    bob.afficher_sorties_entrainement()
-    bob.creer_ia(type=bob.TYPE_REGRESSION, taux_apprentissage=0.001, nb_apprentissages=5000)
-    bob.ia.construire_modele()
-    bob.ia.afficher_modele()
-    bob.ia.entrainer_modele()
-    bob.ia.afficher_erreur()
-    bob.afficher_entrees_test()
-    bob.afficher_sorties_test()
-    bob.ia.predire_resultats(num=3)
-    bob.ia.afficher_resultats()
-    bob.chrono.arreter()
+
 
 def regression_multiple_cancer_sein():
     bob = libIA.LibIA()
