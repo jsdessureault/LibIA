@@ -833,7 +833,8 @@ class Regroupement:
 # Classe LIBIA ---------------------------------------------------------------------------------------------------------------------------------------------------
 import sys
 import numpy as np
-from keras.utils import to_categorical
+#from keras.utils import to_categorical
+from tensorflow.keras.utils import to_categorical
 from matplotlib import pyplot as plt
 import random
 
